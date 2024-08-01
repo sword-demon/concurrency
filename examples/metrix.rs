@@ -9,6 +9,8 @@ const M: usize = 4;
 fn main() -> Result<()> {
     let metrix = Metrics::new();
 
+    println!("{}", metrix);
+
     // start N workers and M requests
     for idx in 0..N {
         task_worker(idx, metrix.clone())?; // Arc::clone(&metrix)
